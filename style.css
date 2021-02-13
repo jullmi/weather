@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  color: white;
+  color: #F2F2F2;
   font-family: "Roboto", sans-serif;
 }
 
@@ -24,42 +24,157 @@ div.weather [data-theme=night] weather {
   text-align: center;
 }
 .current_city {
-  font-size: 70px;
+  font-size: 3em;
   font-weight: 400;
   line-height: 82px;
 }
 .current_description {
-  font-size: 25px;
+  font-size: 1.5em;
   font-weight: normal;
   line-height: 27px;
 }
 .current_temperature {
-  font-size: 100px;
+  font-size: 3em;
   font-weight: 400;
+  padding-bottom: 1em;
 }
 
 .forecast {
   display: flex;
   justify-content: space-between;
+  margin: 0 4em;
 }
 .forecast_item {
-  font-size: 20px;
+  font-size: 1em;
   font-weight: 400;
   line-height: 23.44px;
   text-align: center;
-  margin: 0 2em;
+  padding: 0 1em;
 }
 .forecast_icon {
   width: 50px;
   height: 50px;
 }
+.forecast_time {
+  padding-bottom: 1em;
+}
+.forecast_temperature {
+  padding-top: 1em;
+}
 
+.details {
+  font-size: 1em;
+  padding-top: 4em;
+  margin: 0 5em;
+}
 .details_row {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 3em;
 }
 .details_item {
   flex: 1;
+}
+.details_name {
+  margin-bottom: 1em;
+}
+
+.icon_1d,
+.icon_1n,
+.icon_2d,
+.icon_2n,
+.icon_3d,
+.icon_3n,
+.icon_4d,
+.icon_4n,
+.icon_5d,
+.icon_5n,
+.icon_6d,
+.icon_6n,
+.icon_7d,
+.icon_7n,
+.icon_8d,
+.icon_8n,
+.icon_9d,
+.icon_9n,
+.icon_10d,
+.icon_10n {
+  background-size: 50px;
+  background-repeat: no-repeat;
+}
+
+.icon_1d,
+.icon_1n {
+  background: url("icons/icon_1.png");
+}
+
+.icon_2d,
+.icon_2n {
+  background: url("icons/icon_2.png");
+}
+
+.icon_3d,
+.icon_3n {
+  background: url("icons/icon_3.png");
+}
+
+.icon_4d,
+.icon_4n {
+  background: url("icons/icon_4.png");
+}
+
+.icon_5d,
+.icon_5n {
+  background: url("icons/icon_5.png");
+}
+
+.icon_6d,
+.icon_6n {
+  background: url("icons/icon_6.png");
+}
+
+.icon_7d,
+.icon_7n {
+  background: url("icons/icon_7.png");
+}
+
+.icon_8d,
+.icon_8n {
+  background: url("icons/icon_8.png");
+}
+
+.icon_9d,
+.icon_9n {
+  background: url("icons/icon_9.png");
+}
+
+.icon_10d,
+.icon_10n {
+  background: url("icons/icon_10.png");
+}
+
+.icon_1d,
+.icon_1n,
+.icon_2d,
+.icon_2n,
+.icon_3d,
+.icon_3n,
+.icon_4d,
+.icon_4n,
+.icon_5d,
+.icon_5n,
+.icon_6d,
+.icon_6n,
+.icon_7d,
+.icon_7n,
+.icon_8d,
+.icon_8n,
+.icon_9d,
+.icon_9n,
+.icon_10d,
+.icon_10n {
+  background-size: 50px;
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=style.css.map */
