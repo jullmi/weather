@@ -36,6 +36,14 @@ function convertWind (valueWind) {
     return valueWind.toFixed(0)
 }
 
+//получаем время в часах
+// function convertTime (valueTime) {
+//     let date = new Date(valueTime * 1000)
+//
+// }
+//
+// convertTime(1614362400)
+
 // склеивает единицы измерения и полученные данные
 function getValueWithUnit(value,unit) {
     return `${value} ${unit}`
@@ -83,6 +91,7 @@ function renderDescription (result) {
 }
 
 
+
 //прогноз
 function renderForecast (result) {
     let forecastContainer = document.querySelector('.forecast')
@@ -91,21 +100,20 @@ function renderForecast (result) {
     for (let i = 0; i < 6; i++) {
         let item = result.list[i]
 
-        let icon = item.weather[0].icon
-        let temp = item.main.temp
+        let icon =item.weather[0].icon
+        let temp = convertTemp(item.main.temp)
         let hours = (i == 0 ? 'Сейчас' : item.dt)
-
         let template = `<div class="forecast_item">
                     <div class="forecast_time">${hours}</div>
                     <div class="forecast_icon icon_${icon}"></div>
                     <div class="forecast_temperature">${temp}º</div>
                 </div>`;
         forecast +=template
-
-        console.log(template)
     }
     forecastContainer.innerHTML = forecast
 }
+
+
 
 
 

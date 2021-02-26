@@ -79,102 +79,73 @@ div.weather [data-theme=night] weather {
   margin-bottom: 1em;
 }
 
-.icon_1d,
-.icon_1n,
-.icon_2d,
-.icon_2n,
-.icon_3d,
-.icon_3n,
-.icon_4d,
-.icon_4n,
-.icon_5d,
-.icon_5n,
-.icon_6d,
-.icon_6n,
-.icon_7d,
-.icon_7n,
-.icon_8d,
-.icon_8n,
-.icon_9d,
-.icon_9n,
+.icon_01d,
+.icon_01n,
+.icon_02d,
+.icon_02n,
+.icon_03d,
+.icon_03n,
+.icon_04d,
+.icon_04n,
+.icon_09d,
+.icon_09n,
 .icon_10d,
-.icon_10n {
+.icon_10n,
+.icon_11n,
+.icon_11n,
+.icon_13d,
+.icon_13n,
+.icon_50d,
+.icon_50n {
   background-size: 50px;
   background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
 }
 
-.icon_1d,
-.icon_1n {
-  background: url("icons/icon_1.png");
+.icon_01d,
+.icon_01n {
+  background-image: url("../styles/icons/01d.png");
 }
 
-.icon_2d,
-.icon_2n {
-  background: url("icons/icon_2.png");
+.icon_02d,
+.icon_02n {
+  background-image: url("../styles/icons/02d.png");
 }
 
-.icon_3d,
-.icon_3n {
-  background: url("icons/icon_3.png");
+.icon_03d,
+.icon_03n {
+  background-image: url("../styles/icons/03d.png");
 }
 
-.icon_4d,
-.icon_4n {
-  background: url("icons/icon_4.png");
+.icon_04d,
+.icon_04n {
+  background-image: url("../styles/icons/04d.png");
 }
 
-.icon_5d,
-.icon_5n {
-  background: url("icons/icon_5.png");
-}
-
-.icon_6d,
-.icon_6n {
-  background: url("icons/icon_6.png");
-}
-
-.icon_7d,
-.icon_7n {
-  background: url("icons/icon_7.png");
-}
-
-.icon_8d,
-.icon_8n {
-  background: url("icons/icon_8.png");
-}
-
-.icon_9d,
-.icon_9n {
-  background: url("icons/icon_9.png");
+.icon_09d,
+.icon_09n {
+  background-image: url("../styles/icons/09d.png");
 }
 
 .icon_10d,
 .icon_10n {
-  background: url("icons/icon_10.png");
+  background-image: url("../styles/icons/10d.png");
 }
 
-.icon_1d,
-.icon_1n,
-.icon_2d,
-.icon_2n,
-.icon_3d,
-.icon_3n,
-.icon_4d,
-.icon_4n,
-.icon_5d,
-.icon_5n,
-.icon_6d,
-.icon_6n,
-.icon_7d,
-.icon_7n,
-.icon_8d,
-.icon_8n,
-.icon_9d,
-.icon_9n,
-.icon_10d,
-.icon_10n {
-  background-size: 50px;
-  background-repeat: no-repeat;
+.icon_11n,
+.icon_11n {
+  background-image: url("../styles/icons/11d.png");
+}
+
+.icon_13d,
+.icon_13n {
+  background-image: url("../styles/icons/13d.png");
+}
+
+.icon_50d,
+.icon_50n {
+  background-image: url("../styles/icons/50d.png");
 }
 
 /*# sourceMappingURL=style.css.map */
