@@ -2,7 +2,6 @@
 const requestURL = 'http://api.openweathermap.org/data/2.5/forecast?id=524901&lang=ru&appid=34e7072b9b76b7c9cab63b43364fb10d'
 
 // единицы измерения
-
 const tempUnit = ' °'
 const pressureUnit = ' мм рт ст'
 const humidityUnit = ' %'
@@ -37,24 +36,14 @@ function convertWind (valueWind) {
 }
 
 //получаем время в часах
-// function convertTime (valueTime) {
-//     let date = new Date(valueTime * 1000)
-//
-// }
-//
-// convertTime(1614362400)
+function convertTime (valueTime) {
+    return new Date(valueTime * 1000).toLocaleTimeString([],{hour: '2-digit', minute: '2-digit'})
+}
 
 // склеивает единицы измерения и полученные данные
 function getValueWithUnit(value,unit) {
     return `${value} ${unit}`
 }
-
-// отрисовка прогноза
-// function  render (result) {
-//     renderCurrentDate(result)
-//     renderDescription(result)
-//     renderForecast(result)
-// }
 
 //город, описание, температура
 function renderCurrentDate (result) {
@@ -85,12 +74,10 @@ function renderDescription (result) {
     pressure.textContent = getValueWithUnit(pressureData, pressureUnit)
 
     let wind = document.querySelector('.wind')
-    let windData = result.list [0].wind.speed
+    let windData = convertWind(result.list [0].wind.speed)
     wind.textContent = getValueWithUnit(windData,windUnit)
 
 }
-
-
 
 //прогноз
 function renderForecast (result) {
@@ -102,7 +89,7 @@ function renderForecast (result) {
 
         let icon =item.weather[0].icon
         let temp = convertTemp(item.main.temp)
-        let hours = (i == 0 ? 'Сейчас' : item.dt)
+        let hours = (i == 0 ? 'Сейчас' : convertTime(item.dt))
         let template = `<div class="forecast_item">
                     <div class="forecast_time">${hours}</div>
                     <div class="forecast_icon icon_${icon}"></div>
@@ -114,13 +101,23 @@ function renderForecast (result) {
 }
 
 
+//устанавливаю фон
+function isDay (result) {
+    let backgroundColor = document.querySelector('.weather')
+    let sunset = result.city.sunset
+    let time = result.list[0].dt
 
-
+    if (time > sunset) {
+        backgroundColor.style.background = 'linear-gradient(360deg, #55707E 0%, rgba(255, 255, 255, 0) 100%), #042232'
+    } else {
+        backgroundColor.style.background = 'linear-gradient(360deg, #3594BF 0%, rgba(255, 255, 255, 0) 100%), #53A6CB'
+    }
+}
 
 sendRequest().then (data => {
-    console.log(data)
     result = data
     renderDescription(result)
     renderCurrentDate(result)
     renderForecast(result)
+    isDay(result)
 })

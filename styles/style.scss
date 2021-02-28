@@ -14,14 +14,6 @@ $icon-size:50px;
   margin: 0 auto;
 }
 
-div.weather [data-theme = 'day'],
-.weather{
-  background: linear-gradient(360deg, #3594BF 0%, rgba(255, 255, 255, 0) 100%), #53A6CB;
-}
-div.weather [data-theme = 'night'] weather {
-  background: linear-gradient(360deg, #55707E 0%, rgba(255, 255, 255, 0) 100%), #042232;
-}
-
 .current {
   text-align: center;
   &_city {
@@ -148,4 +140,40 @@ div.weather [data-theme = 'night'] weather {
 .icon_50d,
 .icon_50n {
   background-image: url("../styles/icons/50d.png");
+}
+
+@media screen and (max-width: 600px) {
+  .forecast {
+    display: block;
+    &_item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: $padding;
+    }
+    &_temperature {
+      padding: 0;
+    }
+    &_time {
+      padding: 0;
+    }
+  }
+  .current {
+    &_city {
+      font-size: 1.5em;
+    }
+    &_description {
+      font-size: 1em;
+    }
+  }
+  .details {
+    &_row {
+      display: block;
+      padding-bottom: 0;
+    }
+    &_item {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
