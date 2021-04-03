@@ -5,5 +5,7 @@
 
 ![alt weather](/Screenshots/1.png)
 
+![alt weather](/Screenshots/2.png)
+
 
 
