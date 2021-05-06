@@ -1,5 +1,5 @@
 // Get запрос к API
-const requestURL = 'http://api.openweathermap.org/data/2.5/forecast?id=524901&lang=ru&appid=34e7072b9b76b7c9cab63b43364fb10d'
+const requestURL = 'https://api.openweathermap.org/data/2.5/forecast?id=524901&lang=ru&appid=34e7072b9b76b7c9cab63b43364fb10d'
 
 // единицы измерения
 const tempUnit = ' °'
